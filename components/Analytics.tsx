@@ -1,23 +1,20 @@
 import Script from "next/script";
 
-// Google Analytics（手册关卡5.2）
-// 在 .env.local / Vercel 环境变量里配置 NEXT_PUBLIC_GA_ID="G-XXXXXXX" 后自动启用；
-// 未配置时不加载任何脚本，不影响站点。
+// Google Analytics 4（GA ID: G-NJQDM7HBKY）
+// 挂在根布局（app/layout.tsx）中，由 Next.js 负责注入，全站每个页面仅加载一次，不会重复安装。
+// strategy="beforeInteractive" 会在 <head> 中先于页面交互脚本加载，确保不漏统计。
 export default function Analytics() {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
-  if (!gaId) return null;
-
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-NJQDM7HBKY"
+        strategy="beforeInteractive"
       />
-      <Script id="ga-init" strategy="afterInteractive">
+      <Script id="google-analytics" strategy="beforeInteractive">
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${gaId}');`}
+          gtag('config', 'G-NJQDM7HBKY');`}
       </Script>
     </>
   );
