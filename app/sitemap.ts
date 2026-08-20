@@ -22,7 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return routes.map((r) => ({
-    url: `${SITE.url}${r.path}`,
+    // 规范 URL 不带尾部斜杠（与 canonical、实际 200 页面一致，避免 GSC 抓取时 308 重定向）
+    url: `${SITE.url}${r.path}`.replace(/\/$/, ""),
     lastModified: new Date(),
     changeFrequency: r.freq as MetadataRoute.Sitemap[number]["changeFrequency"],
     priority: r.priority,
