@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Analytics from "@/components/Analytics";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -24,9 +25,8 @@ export const metadata: Metadata = {
   description: SITE.description,
   keywords:
     "Pax Autocratica, guide, gameplay, multiplayer, roadmap, mods, cheats, Steam, breeding, ps5, xbox, steam deck",
-  alternates: {
-    canonical: SITE.url,
-  },
+  // 不在根布局写死 canonical，让 Next.js 基于 metadataBase 为每个路由自动生成
+  // 各自的 canonical（https://paxautocratica.help/实际路径），避免所有页 canonical 都指向首页。
   openGraph: {
     title: SITE.name + " — Guide, Roadmap & Multiplayer",
     description: SITE.description,
@@ -61,6 +61,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
