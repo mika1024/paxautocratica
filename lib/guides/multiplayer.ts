@@ -4,7 +4,7 @@ export const multiplayerData: GuideData = {
   title: "Is Pax Autocratica Multiplayer? Co-op Status and What We Know",
   metaTitle: "Pax Autocratica Multiplayer — Is It Co-op? What We Know",
   description:
-    "Is Pax Autocratica multiplayer? Current status: single-player only, with co-op planned during Early Access. Here's everything officially confirmed about Pax Autocratica co-op.",
+    "Is Pax Autocratica co-op or multiplayer? Current co-op status, what the developer has said, and where to track updates. Updated for 2026.",
   updated: "2026-08-19",
   intro: [
     "Pax Autocratica is currently single-player. Co-op is not available now, but the developer has said it is one of the major features the team hopes to develop during Early Access — without confirming a date, player count, or final design.",

@@ -4,7 +4,7 @@ export const ps5Data: GuideData = {
   title: "Is Pax Autocratica on PS5? Port Status and What Players Should Know",
   metaTitle: "Pax Autocratica PS5 Release — Is a PlayStation Port Coming?",
   description:
-    "Is Pax Autocratica on PS5? No console version exists or has been announced. Learn the confirmed platform picture, PS5 controller support on PC, and whether a port is realistic.",
+    "Pax Autocratica PS5 release window, current port status, and how it compares to Xbox and Steam. Includes official statements and a buy/wait checklist for 2026.",
   updated: "2026-08-19",
   intro: [
     "No — there is no Pax Autocratica PS5 version, and none has been announced. The game launched into Early Access on August 10, 2026 as a PC-exclusive title, available on Steam and the Epic Games Store for Windows.",
